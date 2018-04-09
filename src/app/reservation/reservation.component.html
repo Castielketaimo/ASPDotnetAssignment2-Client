@@ -1,0 +1,43 @@
+<table *ngIf="reservations" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Reservation Id</th>
+      <th>Start Date Time</th>
+      <th>End Date Time</th>
+      <th>Created By</th>
+      <th>Boat Id</th>
+      <th>Boat</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let r of reservations" >
+
+      <td>{{r.startDateTime}}</td>
+      <td>{{r.endDateTime}}</td>
+      <!-- <td>{{r.createdBy.LastName}}</td> -->
+      <td>{{r.boatId}}</td>
+      <!-- <td>{{r.boat.boatName}}</td> -->
+
+      <td>
+        <button class="delete" (click)="delete(r); $event.stopPropagation()">x</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>New Reservation</h2>
+<form [formGroup]="myForm" novalidate>
+  <div class="form-group">
+    Date: <my-date-range-picker name="mydaterange" [options]="myDateRangePickerOptions" formControlName="myDateRange" (dateRangeChanged)="onDateRangeChanged($event)"></my-date-range-picker>
+  </div>
+</form>
+ Boat:
+<select class='select-option' required [(ngModel)]='onOptionsSelected' (ngModelChange)='onOptionsSelected($event)'>
+  <option class='option' *ngFor='let boat of boats' [value]="boat">{{boat.boatName}}</option>
+
+</select>
+
+  <div class="form-group">
+    <button class="btn btn-primary">Add</button>
+  </div>

@@ -1,0 +1,59 @@
+<h1>Signup</h1>
+<div class="col-md-8 col-md-offset-2">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="userName">User Name</label>
+      <input type="text" id="userName" class="form-control" formControlName="userName">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Pass Word</label>
+      <input type="text" id="password" class="form-control" formControlName="password">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" class="form-control" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" class="form-control" formControlName="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="street">Street</label>
+      <input type="text" id="street" class="form-control" formControlName="street">
+    </div>
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" id="city" class="form-control" formControlName="city">
+    </div>
+
+    <div class="form-group">
+      <label for="province">Province</label>
+      <input type="text" id="province" class="form-control" formControlName="province">
+    </div>
+    <div class="form-group">
+      <label for="postalCode">Postal Code</label>
+      <input type="text" id="postalCode" class="form-control" formControlName="postalCode">
+    </div>
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" id="country" class="form-control" formControlName="country">
+    </div>
+
+    <div class="form-group">
+      <label for="mobilePhone">Mobile Phone</label>
+      <input type="text" id="mobilePhone" class="form-control" formControlName="mobilePhone">
+    </div>
+    <div class="form-group">
+      <label for="sailingExperience">Sailing Experience</label>
+      <input type="text" id="sailingExperience" class="form-control" formControlName="sailingExperience">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>

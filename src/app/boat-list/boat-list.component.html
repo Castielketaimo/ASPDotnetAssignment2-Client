@@ -1,0 +1,28 @@
+
+
+<table *ngIf="boats" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Boat Id</th>
+      <th>Boat Name</th>
+      <th>Picture</th>
+      <th>Length In Feet</th>
+      <th>Make</th>
+      <th>Year</th>
+      <th>Creation Date</th>
+      <th>Created By</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let b of boats">
+      <th>{{b.boatId}}</th>
+      <th>{{b.boatName}}</th>
+      <th><img src={{b.picture}}></th>
+      <th>{{b.lengthInFeet}}</th>
+      <th>{{b.make}}</th>
+      <th>{{b.year}}</th>
+      <th>{{b.creationDate}}</th>
+      <th>{{b.createdBy.FirstName}}</th>
+    </tr>
+  </tbody>
+</table>
