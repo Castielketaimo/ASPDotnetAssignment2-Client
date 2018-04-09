@@ -35,7 +35,6 @@
  Boat:
 <select class='select-option' required [(ngModel)]='onOptionsSelected' (ngModelChange)='onOptionsSelected($event)'>
   <option class='option' *ngFor='let boat of boats' [value]="boat">{{boat.boatName}}</option>
-
 </select>
 
   <div class="form-group">
