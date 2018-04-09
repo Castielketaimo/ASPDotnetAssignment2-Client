@@ -5,7 +5,7 @@ export class Reservation {
     constructor(public reservationId?: number,
                 public startDateTime?: string,
                 public endDateTime?: string,
-                public createdBy?: User,
+                public createdBy?: string,
                 public boatId?: number,
                 public boat?: Boat,
     ){}

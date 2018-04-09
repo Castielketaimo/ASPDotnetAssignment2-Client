@@ -94,7 +94,9 @@ export class ReservationComponent implements OnInit {
   }
   
   onSubmit(){
-    
+    this.newReservation.boatId = 2;
+    this.newReservation.createdBy = 'castiel',
+    this.add(this.newReservation);
   }
   add(newReservation: Reservation): void {
     if (!newReservation) { return; }

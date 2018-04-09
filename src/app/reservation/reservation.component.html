@@ -1,11 +1,9 @@
 <table *ngIf="reservations" class="table table-striped">
   <thead>
     <tr>
-      <th>Reservation Id</th>
       <th>Start Date Time</th>
       <th>End Date Time</th>
       <th>Created By</th>
-      <th>Boat Id</th>
       <th>Boat</th>
       <th></th>
     </tr>
@@ -15,9 +13,8 @@
 
       <td>{{r.startDateTime}}</td>
       <td>{{r.endDateTime}}</td>
-      <!-- <td>{{r.createdBy.LastName}}</td> -->
-      <td>{{r.boatId}}</td>
-      <!-- <td>{{r.boat.boatName}}</td> -->
+      <td>{{r.createdBy}}</td>
+      <td>{{r.boat.boatName}}</td>
 
       <td>
         <button class="delete" (click)="delete(r); $event.stopPropagation()">x</button>
@@ -38,5 +35,5 @@
 </select>
 
   <div class="form-group">
-    <button class="btn btn-primary">Add</button>
+    <button class="btn btn-primary" (click) = 'onSubmit()'>Add</button>
   </div>

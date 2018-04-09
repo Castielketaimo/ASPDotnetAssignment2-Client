@@ -11,7 +11,7 @@ export class BoatsService {
 
   constructor(
     private http: Http, ) { }
-  private BASE_URL = "https://comp4976-serverside.azurewebsites.net";
+  private BASE_URL = "https://comp4976-serverside.azurewebsites.net/api/boats";
   getFleets(): Promise<Boat[]> {
     return this.http.get(this.BASE_URL)
       .toPromise()

@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
     this.newUser.UserName = this.myForm.get("userName").value;
     this.newUser.Password = this.myForm.get("password").value;
 
-    alert(this.authService.login(this.newUser));
     if (!this.newUser) { return; }
     this.authService.login(this.newUser)
       .then(newUser => {

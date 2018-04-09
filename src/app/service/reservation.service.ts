@@ -8,7 +8,7 @@ import { Reservation } from '../Models/Reservation';
 @Injectable()
 export class ReservationService {
 
-  private BASE_URL = "https://comp4976-serverside.azurewebsites.net/api/reservation";
+  private BASE_URL = "https://comp4976-serverside.azurewebsites.net/api/Reservations";
   constructor(private http: Http) { }
 
   getReservations(): Promise<Reservation[]> {
@@ -24,7 +24,6 @@ export class ReservationService {
   }
 
   private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.message || error);
   }
 

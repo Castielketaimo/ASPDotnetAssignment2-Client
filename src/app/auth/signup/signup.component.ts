@@ -35,12 +35,7 @@ export class SignupComponent implements OnInit {
     this.newUser.MobileNumber = this.myForm.get("mobilePhone").value;
     this.newUser.SailingExperience = this.myForm.get("sailingExperience").value;
 
-    if (!this.newUser) { return; }
-    this.authService.signup(this.newUser)
-      .then(newUser => {
-        this.myForm.reset();
-        this.router.navigate(['/home']);
-      });
+ 
   }
 
   ngOnInit() {
